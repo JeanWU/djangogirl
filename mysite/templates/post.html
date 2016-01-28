@@ -1,0 +1,35 @@
+<!# -*- coding: utf-8 -*-
+"""
+Created on Wed Jan 20 11:34:37 2016
+
+@author: jean
+""">
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{post.title}}|Jean's Web</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="site-title text-center">
+            <a href="/">Jean's Web</a>
+        </h1>
+    </div>
+    <div class="container post post-detail">
+        <div class="post-heading">
+            <h1 class="title"><a href-"{% url 'post_detail' pk=post.pk %}"></a>
+            </h1>
+            <div clas="date">{{post.created_at|date:"Y/m/d"}}</div>
+        </div>
+        <div id="map-canvas" class="map"></div>
+        <div class="post-content">
+                   {{post.content}}        
+        </div>
+        <hr class="fancy-line">
+        <img class="photo" src="{{post.photo}}" alt="Cover photo">
+    </div>
+</body>
+</html>
